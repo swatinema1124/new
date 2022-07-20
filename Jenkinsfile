@@ -17,12 +17,12 @@ pipeline {
         sh 'docker system prune -a --volumes -f'
       }
     }
-    stage('Start container') {
-      steps {
-        sh 'docker-compose up'
-        sh 'docker-compose ps'
-      }
-    }
+//     stage('Start container') {
+//       steps {
+//         sh 'docker-compose up'
+//         sh 'docker-compose ps'
+//       }
+//     }
     stage('sleep') {
       steps {
         sh 'sleep 150'
