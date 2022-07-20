@@ -23,6 +23,14 @@ pipeline {
         sh 'docker-compose ps'
       }
     }
+    stage('sleep') {
+      steps {
+        sh 'sleep 150'
+       
+      }
+    
+    }
+    
     stage('Run tests against the container') {
       steps {
         sh 'curl http://localhost:3000/param?query=demo | jq'
